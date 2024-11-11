@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    background-color: #0288d1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    z-index: 100;
+    flex-direction: row;
+    /* Alinhamento padrão */
+}
+
+nav h1 {
+    color: white;
+    font-family: 'Denk One';
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    position: relative;
+    z-index: 300;
+    transition: transform 0.3s ease;
+    /* Adiciona transição suave */
+}
+
+nav.active .menu-open h1 {
+    transform: translateY(-50px);
+    /* Move para cima quando o menu está ativo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1.5rem;
+    z-index: 200;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 .3rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 400;
+}
+
+nav .menu-toggle div {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+}
+
+#exercicios h2 {
+    text-align: center;
+}
+
+#exercicios table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#exercicios th,
+#exercicios td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#exercicios th {
+    background-color: #0288d1;
+    color: white;
+}
+
+#treino-semanal {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+#treino-semanal h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#treino-semanal table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+#nutricao h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0288d1;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e1f5e1;
+}
+
+#imc-section {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 50;
+}
+
+#imc-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 15px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.intro-box {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.intro-box h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.intro-box h3 {
+    font-size: .7em;
+    color: #d89a15d8;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.intro-box p {
+    font-size: 1em;
+    color: #555555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .intro-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .intro-box h2 {
+        font-size: 1.8em;
+    }
+
+    .intro-box h3 {
+        font-size: 1.3em;
+    }
+
+    #treino-semanal h2 {
+        font-size: 1.6rem;
+    }
+
+    #treino-semanal table,
+    #exercicios table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 1rem 0;
+        background-color: #0288d1;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav .menu-toggle {
+        display: flex;
+    }
+}

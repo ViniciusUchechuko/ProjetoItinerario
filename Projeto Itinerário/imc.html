@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifePro - Saúde e Bem-estar</title>
+    <link rel="stylesheet" href="/Projeto Itinerário/assets/style.css">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <h1>LifePro</h1>
+        <div class="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="/Projeto Itinerário/index.html">Home</a></li>
+            <li><a href="/Projeto Itinerário/nutricao.html">Nutrição</a></li>
+            <li><a href="/Projeto Itinerário/execicios.html">Exercícios</a></li>
+            <li><a href="/Projeto Itinerário/imc.html">Calcule seu IMC</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de IMC -->
+    <section id="imc-section">
+        <h2>Calculadora IMC</h2>
+        <form id="imc-form">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" placeholder="0,00Kg" required>
+
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" name="altura" step="0.01" placeholder="0,00M" required>
+
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        <div id="result"></div>
+    </section>
+    <script src="/Projeto Itinerário/assets/script.js"></script>    
+ 
+</body>
+</html>
