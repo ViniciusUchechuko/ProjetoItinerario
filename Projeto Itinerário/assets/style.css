@@ -68,11 +68,6 @@ nav ul li a:hover {
     background-color: #3757c065;
 }
 
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 nav .menu-toggle {
     display: none;
     flex-direction: column;
